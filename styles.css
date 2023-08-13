@@ -96,6 +96,31 @@
     align-items: center;
 }
 
-.passwords:hover {
-    background-color: #476794;
+.password-inputs {
+    height: 5vh;
+    width: 80%;
+    background-color: #273549;
+    color: #10b981;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+}
+
+.password-inputs:hover {
+    background-color: #424c5a;
+}
+
+.copy-result {
+    height: 5vh;
+    width: 20%;
+    background-color: #252424;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+
+.copy-result:hover {
+    background-color: #140d0d;
 }
