@@ -15,7 +15,7 @@
 
 .content-container {
     width: 30%;
-    height: 60vh;
+    height: 70vh;
     background: #1f2937;
 }
 
@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 30vh;
+    height: 40vh;
 }
 
 .content-texts {
@@ -51,14 +51,14 @@
 
 .generate-btn {
     width: 45%;
-    background-color: #4Adf86;
+    background-color: #10b981;
     padding: 6px;
     margin-top: 30px;
     border-radius: 5px;
+    color: #ffffff;
 }
 
 .generate-btn:hover {
-    color: #ffffff;
     background-color: #2f3e53;
 }
 
