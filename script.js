@@ -2,7 +2,7 @@ const passwordCharacters =
   '0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&.*()ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const passwordInputs = document.querySelectorAll('.password-inputs');
 
-function generateRandomPassword() {
+const generateRandomPassword = () => {
   // This code block generates any random password
   const passwordLength = 10;
   let password = '';
@@ -13,7 +13,7 @@ function generateRandomPassword() {
   return password;
 }
 
-function forEachPasswords() {
+const forEachPasswords = () => {
   // This code block assigns unique passwords for each input on its own
   for (let i = 0; i < passwordInputs.length; i += 1) {
     const inputs = passwordInputs[i];
@@ -21,22 +21,22 @@ function forEachPasswords() {
   }
 }
 
-function copyPasswordOne() {
+const copyPasswordOne = () => {
   const text = document.querySelector('#input-1').value;
   navigator.clipboard.writeText(text);
 }
 
-function copyPasswordTwo() {
+const copyPasswordTwo = () => {
   const text = document.querySelector('#input-2').value;
   navigator.clipboard.writeText(text);
 }
 
-function copyPasswordThree() {
+const copyPasswordThree = () => {
   const text = document.querySelector('#input-3').value;
   navigator.clipboard.writeText(text);
 }
 
-function copyPasswordFour() {
+const copyPasswordFour = () => {
   const text = document.querySelector('#input-4').value;
   navigator.clipboard.writeText(text);
 }
