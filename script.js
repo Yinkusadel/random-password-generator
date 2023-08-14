@@ -1,44 +1,57 @@
-let passwordCharacters = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&.*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let passwordLength = 10;
-let password = "";
+const passwordCharacters =
+  '0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&.*()ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const passwordInputs = document.querySelectorAll('.password-inputs');
 
-
-function genPassword() {
-    for (let i = 0; i <= passwordLength; i+=1) {
-        let randomNumber = Math.floor(Math.random() * passwordCharacters.length);
-        password += passwordCharacters.charAt(randomNumber);
-       }
-
-       document.getElementById("input-1").value =  password;
-       document.getElementById("input-2").value =  password;
-       document.getElementById("input-3").value =  password;
-       document.getElementById("input-4").value =  password;
-
-       if (password === password) {
-        password -= password
-       }
+function generateRandomPassword() {
+  // This code block generates any random password
+  const passwordLength = 10;
+  let password = '';
+  for (let i = 0; i <= passwordLength; i += 1) {
+    const randomNumber = Math.floor(Math.random() * passwordCharacters.length);
+    password += passwordCharacters.charAt(randomNumber);
+  }
+  return password;
 }
 
-function copyPasswordOne () {
-    let text = document.getElementById("input-1").value;
-    navigator.clipboard.writeText(text)
+function forEachPasswords() {
+  // This code block assigns unique passwords for each input on its own
+  for (let i = 0; i < passwordInputs.length; i += 1) {
+    const inputs = passwordInputs[i];
+    inputs.value = generateRandomPassword();
+  }
 }
 
-function copyPasswordOne () {
-    let text = document.getElementById("input-1").value;
-    navigator.clipboard.writeText(text)
+function copyPasswordOne() {
+  const text = document.getElementById('input-1').value;
+  navigator.clipboard.writeText(text);
 }
 
+function copyPasswordTwo() {
+  const text = document.getElementById('input-2').value;
+  navigator.clipboard.writeText(text);
+}
 
+function copyPasswordThree() {
+  const text = document.getElementById('input-3').value;
+  navigator.clipboard.writeText(text);
+}
 
+function copyPasswordFour() {
+  const text = document.getElementById('input-4').value;
+  navigator.clipboard.writeText(text);
+}
 
+const copyFirstPassword = document.getElementById('copy-1');
+copyFirstPassword.addEventListener('click', copyPasswordOne);
 
-document.addEventListener('click', function copyFirstPassword() {
-    document.getElementById('copy-1').onclick = copyPasswordOne;
-  });
+const copySecondPassword = document.getElementById('copy-2');
+copySecondPassword.addEventListener('click', copyPasswordTwo);
 
+const copyThirdPassword = document.getElementById('copy-3');
+copyThirdPassword.addEventListener('click', copyPasswordThree);
 
+const copyForthPassword = document.getElementById('copy-4');
+copyForthPassword.addEventListener('click', copyPasswordFour);
 
-document.addEventListener('click', function passwordGeneratorButton() {
-    document.getElementById('generate-btn').onclick = genPassword;
-  });
+const generateButton = document.getElementById('generate-btn');
+generateButton.addEventListener('click', forEachPasswords);
