@@ -1,4 +1,4 @@
-# Project Name
+# Random password generator
 
 > A random password generator that suggest password to users.
 
