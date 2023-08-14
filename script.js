@@ -22,36 +22,36 @@ function forEachPasswords() {
 }
 
 function copyPasswordOne() {
-  const text = document.getElementById('input-1').value;
+  const text = document.querySelector('#input-1').value;
   navigator.clipboard.writeText(text);
 }
 
 function copyPasswordTwo() {
-  const text = document.getElementById('input-2').value;
+  const text = document.querySelector('#input-2').value;
   navigator.clipboard.writeText(text);
 }
 
 function copyPasswordThree() {
-  const text = document.getElementById('input-3').value;
+  const text = document.querySelector('#input-3').value;
   navigator.clipboard.writeText(text);
 }
 
 function copyPasswordFour() {
-  const text = document.getElementById('input-4').value;
+  const text = document.querySelector('#input-4').value;
   navigator.clipboard.writeText(text);
 }
 
-const copyFirstPassword = document.getElementById('copy-1');
+const copyFirstPassword = document.querySelector('#copy-1');
 copyFirstPassword.addEventListener('click', copyPasswordOne);
 
-const copySecondPassword = document.getElementById('copy-2');
+const copySecondPassword = document.querySelector('#copy-2');
 copySecondPassword.addEventListener('click', copyPasswordTwo);
 
-const copyThirdPassword = document.getElementById('copy-3');
+const copyThirdPassword = document.querySelector('#copy-3');
 copyThirdPassword.addEventListener('click', copyPasswordThree);
 
-const copyForthPassword = document.getElementById('copy-4');
+const copyForthPassword = document.querySelector('#copy-4');
 copyForthPassword.addEventListener('click', copyPasswordFour);
 
-const generateButton = document.getElementById('generate-btn');
+const generateButton = document.querySelector('#generate-btn');
 generateButton.addEventListener('click', forEachPasswords);
