@@ -11,7 +11,7 @@ const generateRandomPassword = () => {
     password += passwordCharacters.charAt(randomNumber);
   }
   return password;
-}
+};
 
 const forEachPasswords = () => {
   // This code block assigns unique passwords for each input on its own
@@ -19,27 +19,27 @@ const forEachPasswords = () => {
     const inputs = passwordInputs[i];
     inputs.value = generateRandomPassword();
   }
-}
+};
 
 const copyPasswordOne = () => {
   const text = document.querySelector('#input-1').value;
   navigator.clipboard.writeText(text);
-}
+};
 
 const copyPasswordTwo = () => {
   const text = document.querySelector('#input-2').value;
   navigator.clipboard.writeText(text);
-}
+};
 
 const copyPasswordThree = () => {
   const text = document.querySelector('#input-3').value;
   navigator.clipboard.writeText(text);
-}
+};
 
 const copyPasswordFour = () => {
   const text = document.querySelector('#input-4').value;
   navigator.clipboard.writeText(text);
-}
+};
 
 const copyFirstPassword = document.querySelector('#copy-1');
 copyFirstPassword.addEventListener('click', copyPasswordOne);
