@@ -3,7 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Random Password Generator</title>
+    <link href="styles.css" rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <div class="body-container">
+      <div class="content-container">
+        <div class="content">
+          <div class="content-texts">
+            <p class="text-content">Generate a</p>
+            <p class="green-text">random password</p>
+            <p class="password-comment">Never use an insecure password again.</p>
+          </div>
+          <button class="generate-btn" id="generate-btn" type="button">
+            <svg
+              width="14"
+              height="13"
+              viewBox="0 0 14 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.30064 0.0462736C8.71692 0.177494 9 0.563541 9 1.00001V6.00001L13 6.00001C13.3729 6.00001 13.7148 6.20747 13.887 6.5382C14.0592 6.86893 14.0331 7.268 13.8192 7.57347L6.81924 17.5735C6.56894 17.931 6.11564 18.085 5.69936 17.9537C5.28309 17.8225 5 17.4365 5 17L5 12H1C0.627127 12 0.285222 11.7926 0.113024 11.4618C-0.0591735 11.1311 -0.0330591 10.732 0.180771 10.4265L7.18077 0.426549C7.43107 0.0689788 7.88436 -0.0849466 8.30064 0.0462736Z"
+                fill="white"
+              />
+            </svg>
+            Generate password
+          </button>
+        </div>
+        <p class="thin-border"></p>
+
+        <div class="password-display-container">
+          <div class="password-display">
+            <p class="passwords">
+              <input class="password-inputs" id="input-1" type="text" title="input" />
+              <button class="copy-result" id="copy-1" type="button">Copy</button>
+            </p>
+            <p class="passwords">
+              <input class="password-inputs" id="input-2" type="text" title="input" />
+              <button class="copy-result" id="copy-2" type="button">Copy</button>
+            </p>
+            <p class="passwords">
+              <input class="password-inputs" id="input-3" type="text" title="input" />
+              <button class="copy-result" id="copy-3" type="button">Copy</button>
+            </p>
+            <p class="passwords">
+              <input class="password-inputs" id="input-4" type="text" title="input" />
+              <button class="copy-result" id="copy-4" type="button">Copy</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
